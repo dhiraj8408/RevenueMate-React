@@ -1,0 +1,111 @@
+.main {
+  min-height: 200vh; /* For mobile view */
+  height: auto; /* For mobile view */
+}
+
+.formprofile {
+  padding: 20px;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-radius: 8px;
+  max-width: 90vw;
+  margin: 20px auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+form select {
+  width: 15vw; /* Default width for larger screens */
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+form button {
+  display: block;
+  width: 15vw; /* Default width for larger screens */
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+/* TransactionTable.module.css */
+
+.table {
+  width: 80vw;
+  border-collapse: collapse;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  font-size: 18px;
+  text-align: center;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.table th {
+  background-color: #0056b3;
+  color: white;
+}
+
+.table tr:hover {
+  background-color: #cbb8b8;
+}
+
+.display_total {
+  text-align: center;
+  font-size: large;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .main {
+      min-height: 150vh; /* Ensure it has a minimum height */
+      height: auto; /* Allow for dynamic height */
+  }
+
+  .formprofile {
+      flex-direction: column; /* Stack items vertically */
+      padding: 10px; /* Adjust padding */
+      width: 90vw; /* Take full width */
+  }
+
+  form select,
+  form button {
+      width: 95%; /* Full width for mobile */
+      margin: 5px; /* Center on the page */
+      padding: 5px;
+  }
+  .display_total p{
+    font-size: 14px;
+  }
+  .table {
+      width: 100%; /* Full width for mobile */
+      margin-left: 0; /* Remove side margins */
+      margin-right: 0; /* Remove side margins */
+  }
+
+  .table th,
+  .table td {
+      font-size: 14px; /* Adjust font size for readability */
+      padding: 10px; /* Adjust padding */
+  }
+}

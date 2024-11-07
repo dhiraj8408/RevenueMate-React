@@ -1,0 +1,137 @@
+/* Header Styles */
+header {
+  background-color: #212529;
+  color: white;
+  padding: 10px 20px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.div1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Ensure logo and toggle button are vertically aligned */
+}
+
+.mobile_btns {
+  visibility: hidden; /* Initially hidden */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: large;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  nav ul {
+      flex-direction: column;
+      align-items: center;
+      background-color: #333;
+      padding: 15px;
+      display: none; /* Hide menu items by default on small screens */
+      width: 100%; /* Full width for the menu */
+      position: absolute; /* Position the menu absolutely */
+      top: 60px; /* Adjust based on header height */
+      left: 0; /* Align to the left */
+      z-index: 1; /* Ensure it appears above other elements */
+  }
+
+  .menu-active {
+      display: flex; /* Show menu when activated */
+  }
+
+  .mobile_btns {
+    visibility: visible; /* Make visible when in mobile view */
+    margin-top: 10px; /* Add some margin on top */
+  }
+
+  .menu-toggle {
+      display: flex; /* Show toggle button on mobile */
+      align-items: center; /* Center vertically */
+      justify-content: center; /* Center horizontally */
+      cursor: pointer; /* Change cursor to pointer */
+      font-size: 1.5rem; /* Adjust size as needed */
+      margin-left: 10px;
+  }
+
+  .mobile_menus {
+    display: flex; /* Show mobile menu */
+    flex-direction: column; /* Stack items vertically */
+  }
+  .mobile_menus ul{
+    list-style: none;
+  }
+  .mobile_menus li{
+    
+    padding: 5px;
+  }
+  .mobile_menus a {
+    color: #fff; /* Set link color for mobile menu */
+    text-decoration: none; /* Remove underline */
+    padding: 10px ; /* Add padding for better spacing */
+    font-size: large; /* Adjust font size */
+  }
+
+}
+
+/* Toggle Button Styles */
+.toggle-button {
+  background-color: transparent; /* No background */
+  border: none; /* Remove border */
+  cursor: pointer; /* Change cursor to pointer */
+  display: flex; /* Use flexbox to center the icon */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  font-size: 1.5rem; /* Adjust size of the icon */
+  color: inherit; /* Use the current text color */
+}
+
+.toggle-button:hover {
+  color: #ffd700; /* Change color on hover */
+}
+
+/* Icon Styles */
+.toggle-button svg {
+  width: 1em; /* Adjust size of the icons */
+  height: 1em; /* Maintain aspect ratio */
+}
+
+/* Dark Mode Icon Styles */
+.toggle-button.dark {
+  color: #ffd700; /* Change icon color in dark mode */
+}
+
+.toggle-button.dark:hover {
+  color: #fff; /* Change hover color in dark mode */
+}

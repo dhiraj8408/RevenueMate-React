@@ -1,0 +1,112 @@
+/* General Page Styles */
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f2f2f2;
+}
+
+/* Register Form Container */
+.register {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.formsignup {
+  display: flex;
+  flex-direction: column;
+}
+
+.registerform h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Form Inputs */
+.registerform input {
+  width: 90%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.registerform input:focus {
+  border-color: #888;
+  outline: none;
+}
+
+/* Submit Button */
+#submit {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+#submit:hover {
+  background-color: #555;
+}
+
+/* Google Signup Link */
+.google-signup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.google-signup img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+/* Mobile Styles */
+@media (max-width: 500px) {
+  .page {
+    padding: 10px; /* Add some padding to the page */
+  }
+
+  .register {
+    padding: 20px; /* Reduce padding for smaller screens */
+    width: 100%; /* Allow full width on mobile */
+    max-width: 100%; /* Remove max-width restriction */
+  }
+
+  .registerform h1 {
+    font-size: 1.5rem; /* Adjust font size for headings */
+    margin-bottom: 15px; /* Reduce margin */
+  }
+
+  .registerform input {
+    width: 90%; /* Full width for inputs */
+    padding: 10px; /* Adjust padding */
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+
+  #submit {
+    padding: 10px; /* Reduce padding for submit button */
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .google-signup {
+    font-size: 14px; /* Adjust font size for Google signup link */
+  }
+}

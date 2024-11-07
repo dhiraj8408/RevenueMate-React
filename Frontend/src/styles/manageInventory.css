@@ -1,0 +1,92 @@
+/* Container for the Manage Inventory component */
+.manage-inventory-container {
+    max-width: 450px; /* Increased width for a more spacious layout */
+    margin: 40px auto; /* Centering with some top margin */
+    padding: 30px; /* Increased padding for better spacing */
+    border: 1px solid white; /* Removed border for a cleaner look */
+    border-radius: 12px; /* Slightly more rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Form styles */
+.manage-inventory-form {
+    display: flex;
+    flex-direction: column; /* Vertical layout for the form */
+}
+
+/* Group for each form element */
+.form-group {
+    margin-bottom: 20px; /* Spacing below each form group */
+}
+
+/* Label styles */
+.form-label {
+    font-weight: 600; /* Semi-bold for better emphasis */
+    margin-bottom: 8px; /* Spacing below the label */
+}
+
+/* Input field styles */
+.form-input {
+    width: 95%;
+    padding: 12px; /* More padding for a comfortable feel */
+    border: 2px solid #ddd; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 16px; /* Larger font size for better readability */
+    transition: border-color 0.3s ease; /* Smooth transition for focus state */
+}
+
+/* Input field focus state */
+.form-input:focus {
+    border-color: #4caf50; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Button styles */
+.form-button {
+    width: 100%; /* Full width for the button */
+    background-color: #4caf50; /* Primary button color */
+    color: white; /* White text */
+    padding: 12px; /* Padding for the button */
+    border: none; /* No border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 16px; /* Increased font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+/* Button hover state */
+.form-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Button active state */
+.form-button:active {
+    transform: translateY(1px); /* Slight depression effect when pressed */
+}
+
+.delInv{
+    max-width: 450px; /* Increased width for a more spacious layout */
+    margin: 40px auto; /* Centering with some top margin */
+    padding: 30px; /* Increased padding for better spacing */
+    border: 1px solid white; /* Removed border for a cleaner look */
+    border-radius: 12px; /* Slightly more rounded corners */
+    background-color: #ffffff; /* White background for a clean appearance */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Optional media query for responsiveness */
+@media (max-width: 500px) {
+    .manage-inventory-container {
+        padding: 20px; /* Less padding on smaller screens */
+        margin: 10px;
+    }
+
+    .form-button {
+        font-size: 14px; /* Smaller font size for the button */
+    }
+
+    .form-input {
+        font-size: 14px; /* Smaller font size for inputs */
+    }
+}

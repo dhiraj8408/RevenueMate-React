@@ -1,0 +1,70 @@
+/* Main Content Styles */
+main {
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 60px;
+  margin: 20px;
+  width: 50vw;
+  max-width: 800px;
+}
+
+.homepagetext h1 {
+  margin: 10px 0;
+  color: #333;
+  font-size: 1.8rem;
+}
+
+.homepagetext h2 {
+  margin-top: 15px;
+  color: #666;
+  font-size: 1.4rem;
+}
+
+.homepageimage {
+  margin-top: 10px;
+}
+
+.homepageimage img {
+  width: 50vw;
+  height: 80vh;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  main {
+      flex-direction: column; /* Stack the elements vertically */
+      padding: 10px; /* Reduce padding */
+  }
+
+  .card {
+      padding: 30px; /* Reduce padding inside cards */
+      margin: 20px; /* Reduce margin around cards */
+      width: 80vw; /* Take more width on mobile */
+  }
+
+  .homepagetext h1 {
+      font-size: 1.5rem; /* Smaller font size for headings */
+  }
+
+  .homepagetext h2 {
+      font-size: 1.2rem; /* Smaller font size for subheadings */
+  }
+
+  .homepageimage img {
+      width: 80vw; /* Take more width on mobile */
+      height: auto; /* Maintain aspect ratio */
+  }
+}

@@ -1,0 +1,297 @@
+/* Container styling */
+.record-transactions-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+/* Form container styling */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 600px;
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Label styling */
+.label-items,
+.label-quantity {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.label-text {
+  margin-bottom: 5px;
+}
+
+/* Select and input fields styling */
+.select-items,
+.input-quantity {
+  width: 95%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.select-items:focus,
+.input-quantity:focus {
+  border-color: #007bff;
+}
+
+/* Button styling */
+.button-submit,
+.button-clear {
+  padding: 10px 20px;
+  /* width: 35%; */
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button-submit {
+  background-color: #28a745;
+  color: white;
+  margin-right: 10px;
+}
+
+.button-submit:hover {
+  background-color: #218838;
+}
+
+.button-clear {
+  background-color: #dc3545;
+  color: white;
+}
+
+.button-clear:hover {
+  background-color: #c82333;
+}
+
+/* Items bought container styling */
+.items-bought-container {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.items-bought-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Table styling */
+.items-bought-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+.table-header {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  text-align: left;
+}
+
+.table-data {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+/* Styling for the main container */
+.transactioncontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  padding: 25px;
+  /* border: 1px solid #ddd; */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+/* Form styling */
+.transaction-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Input field styling */
+.input-field {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 95%;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: #007bff;
+}
+
+/* Label styling */
+.label-text {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Select field styling */
+.select-field {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.select-field:focus {
+  border-color: #007bff;
+}
+
+.button-container {
+  display: flex; /* Use flexbox to arrange child elements */
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* Button styling */
+.transact-button {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 50px;
+  transition: background-color 0.3s ease;
+}
+
+.transact-button:hover {
+  background-color: #218838;
+}
+
+/* Button styling */
+.transact-clear-button {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 50px;
+  transition: background-color 0.3s ease;
+}
+
+.transact-clear-button:hover {
+  background-color: #c82333;
+}
+
+/* Transaction details styling */
+.transaction-details,
+.transaction-status {
+  font-size: 16px;
+  color: #333;
+  margin-top: 15px;
+}
+
+/* Mobile View */
+@media (max-width: 600px) {
+  .record-transactions-container {
+      padding: 10px; /* Adjust padding for mobile view */
+      width: 90%; /* Wider for better responsiveness */
+      margin: 5px;
+      border: none;
+  }
+
+  .form-container {
+      padding: 5px; /* Reduce padding in the form container */
+      margin: 15px;
+  }
+
+  .label-items,
+  .label-quantity {
+      font-size: 14px; /* Smaller font size for labels */
+      width: 80%;
+      margin-left: 10px;
+  }
+
+  .select-items,
+  .input-quantity,
+  .input-field,
+  .select-field {
+      padding: 8px; /* Smaller padding for inputs */
+      font-size: 14px; /* Adjust font size for inputs */
+      width: 95%;
+  }
+
+  .button-submit,
+  .button-clear,
+  .transact-button,
+  .transact-clear-button {
+      padding: 10px 15px; /* Smaller padding for buttons */
+      font-size: 14px; /* Adjust font size for buttons */
+  }
+
+  .items-bought-title {
+      font-size: 16px; /* Adjust font size for item titles */
+  }
+
+  .items-bought-table {
+      font-size: 14px; /* Adjust table font size */
+  }
+
+  .table-header,
+  .table-data {
+      padding: 3px; /* Smaller padding for table cells */
+  }
+
+  .transactioncontainer{
+    margin: 10px;
+
+  }
+  .select-payment-mode{
+    width:50%;
+  }
+  .button-submit{
+    width:100%;
+  }
+}

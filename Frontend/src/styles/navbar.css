@@ -1,0 +1,18 @@
+*{
+    margin:0;
+    border:0;
+}
+.div1{
+    display:flex;
+    background-color: black;
+    justify-content: space-between;
+    color:white;
+    height:10vh;
+}
+.logo{
+    width:70vw;
+    text-align: left;
+}
+.home,.signup,.login{
+    text-align: center;
+}

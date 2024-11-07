@@ -1,0 +1,84 @@
+.expense-form-container {
+  width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.expense-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-field, .select-field, .transact-button {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.input-field {
+  width: 100%;
+}
+
+.select-field {
+  width: 100%;
+  padding: 10px;
+}
+
+.transact-button {
+  background-color: #28a745;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+}
+
+.transact-button:hover {
+  background-color: #218838;
+}
+
+.label-text {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.transaction-status {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* Mobile View */
+@media (max-width: 600px) {
+  .expense-form-container {
+    width: 90%; /* Use a wider percentage for better responsiveness */
+    padding: 15px; /* Slightly reduced padding for a more compact view */
+    border-radius: 10px; /* More rounded corners for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+  }
+
+  .label-text {
+    font-size: 15px; /* Slightly larger font size for readability */
+    margin-bottom: 5px; /* Space below label for clarity */
+  }
+
+  .input-field, .select-field {
+    margin: 8px 0; /* More consistent margin */
+    padding: 12px; /* Increased padding for easier interaction */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .transact-button {
+    padding: 10px; /* Increased padding for touch targets */
+    margin-top: 15px; /* Added margin for spacing above the button */
+    font-size: 12px; /* Larger font size for better readability */
+    border-radius: 5px; /* Slightly more rounded corners */
+    width: 100%;
+  }
+
+  .transaction-status {
+    font-size: 18px; /* Increased font size for visibility */
+    margin-top: 15px; /* Space above the status message */
+  }
+}
