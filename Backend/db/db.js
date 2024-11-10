@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const { PG_USER, PG_HOST, PG_DATABASE, PG_PASSWORD, PG_PORT } = process.env;
+const { PG_USER, PG_HOST, PG_DATABASE, PG_PASSWORD, PG_PORT, PG_SSL_CERT } = process.env;
 
 const db = new pg.Client({
     user: PG_USER,
@@ -11,6 +11,10 @@ const db = new pg.Client({
     database: PG_DATABASE,
     password: PG_PASSWORD,
     port: parseInt(PG_PORT, 10),
+    ssl: {
+        rejectUnauthorized: true,
+        ca: PG_SSL_CERT,
+    },
 });
 
 (async () => {
