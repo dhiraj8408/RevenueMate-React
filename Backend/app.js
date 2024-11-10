@@ -2,7 +2,7 @@ import express from 'express';
 import session from 'express-session';
 import bodyParser from 'body-parser';
 import passport from 'passport';
-import './db/db.js'; // Ensure this connects to your database
+import './db/db.js'; 
 import dotenv from 'dotenv';
 import morgan from 'morgan';
 import cors from 'cors';
@@ -11,12 +11,22 @@ dotenv.config();
 
 const app = express();
 
+const allowedOrigins = [
+    'http://localhost:3000',
+    'https://revenuemate-frontend.onrender.com'
+];
+
 // CORS Configuration
 app.use(cors({
-    origin: 'http://localhost:3000',
-    origin: 'https://revenuemate-frontend.onrender.com',
+    origin: (origin, callback) => {
+        if (allowedOrigins.includes(origin) || !origin) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
     methods: ['GET', 'POST', 'OPTIONS'],
-    credentials: true, 
+    credentials: true,
 }));
 
 // Body parsers
@@ -26,7 +36,7 @@ app.use(express.json());
 // Logging
 app.use(morgan('dev'));
 
-// Serve static files
+// Static files
 app.use(express.static('public'));
 
 // Session management
@@ -69,5 +79,4 @@ app.use((err, req, res, next) => {
     res.status(500).send('Something broke!');
 });
 
-// Expose the app for the server file
 export default app;
