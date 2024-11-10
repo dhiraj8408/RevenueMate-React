@@ -2,9 +2,10 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AppContext } from './AppContext';
 import '../styles/deleteInventory.css';
 
-const DeleteInventory = () => {
+const DeleteInventory = (props) => {
   const {userid,mode} = useContext(AppContext);
   console.log("id",userid);
+  console.log("itemName",props.item);
 
   const [items, setItems] = useState([]);
   const [selectedItems, setSelectedItems] = useState([]);
@@ -13,7 +14,7 @@ const DeleteInventory = () => {
   useEffect(() => {
     const fetchItems = async () => {
       try {
-        const response = await fetch('https://revenuemate-backend.onrender.com/revenueMate/v1/merchant/home', {
+        const response = await fetch('http://localhost:5000/revenueMate/v1/merchant/home', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -36,7 +37,7 @@ const DeleteInventory = () => {
       }
     };
     fetchItems();
-  }, [userid]); // Add userid as a dependency to re-fetch items if the ID changes
+  }, [userid,props.item]); // Add userid as a dependency to re-fetch items if the ID changes
 
   // Handle checkbox selection
   const handleCheckboxChange = (itemName) => {
@@ -64,7 +65,7 @@ const DeleteInventory = () => {
     console.log(selectedItems);
     
     try {
-      const response = await fetch('https://revenuemate-backend.onrender.com/revenueMate/v1/inventory/removeInventory', { // Updated URL
+      const response = await fetch('http://localhost:5000/revenueMate/v1/inventory/removeInventory', { // Updated URL
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

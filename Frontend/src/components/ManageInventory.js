@@ -14,7 +14,7 @@ export default function ManageInventory(props) {
     e.preventDefault();
     
     try {
-      const response = await fetch('https://revenuemate-backend.onrender.com/revenueMate/v1/inventory/addInventory', {
+      const response = await fetch('http://localhost:5000/revenueMate/v1/inventory/addInventory', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -31,8 +31,8 @@ export default function ManageInventory(props) {
         console.log('Data submitted successfully');
         setItemName(''); // Clear the form fields after successful submission
         setPrice('');
-         // Refresh the page
-      window.location.reload();
+      //    // Refresh the page
+      // window.location.reload();
       } else {
         console.error('Error submitting data');
       }
@@ -76,7 +76,7 @@ export default function ManageInventory(props) {
         </div>
 
        <div className='delInv' style={{ backgroundColor: mode==='dark' ? '#000' : '#fff', color: mode==='dark'? '#e0e0e0' : '#000' }}>
-            <DeleteInventory/>
+            <DeleteInventory item={itemName}/>
        </div>
         
     </div>
