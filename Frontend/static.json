@@ -1,17 +1,16 @@
 {
-    "headers": {
-      "/**": {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
-        "Access-Control-Allow-Headers": "Content-Type, Authorization"
-      }
-    },
-    "redirects": [
-      {
-        "source": "/*",
-        "destination": "/index.html",
-        "type": 200
-      }
-    ]
-  }
-  
+  "headers": {
+    "/**": {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type, Authorization"
+    }
+  },
+  "redirects": [
+    {
+      "source": "/*",
+      "destination": "/index.html",
+      "type": 200
+    }
+  ]
+}
