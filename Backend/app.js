@@ -13,9 +13,10 @@ const app = express();
 
 // CORS Configuration
 app.use(cors({
-    origin: 'http://localhost:3000', // Allow requests from this origin
-    methods: ['GET', 'POST', 'OPTIONS'], // Allowed HTTP methods
-    credentials: true, // Allow cookies to be sent  
+    origin: 'http://localhost:3000',
+    origin: 'https://revenuemate-frontend.onrender.com',
+    methods: ['GET', 'POST', 'OPTIONS'],
+    credentials: true, 
 }));
 
 // Body parsers

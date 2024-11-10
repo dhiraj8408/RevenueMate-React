@@ -14,7 +14,7 @@ const Logout = () => {
     const logoutUser = async () => {
       try {
         // Send a POST request to log out
-        const response = await fetch('http://localhost:5000/revenueMate/v1/logout', {
+        const response = await fetch('https://revenuemate-backend.onrender.com/revenueMate/v1/logout', {
           method: 'POST', // Changed to POST as requested
           headers: {
             'Content-Type': 'application/json', // Set content type if necessary

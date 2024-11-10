@@ -59,7 +59,7 @@ const Profile = () => {
     console.log(userid)
     // Make POST request
     try {
-      const response = await fetch('http://localhost:5000/revenueMate/v1/profile/filterTransactions', {
+      const response = await fetch('https://revenuemate-backend.onrender.com/revenueMate/v1/profile/filterTransactions', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

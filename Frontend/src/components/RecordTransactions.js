@@ -19,7 +19,7 @@ export default function RecordTransactions(props) {
   // Function to fetch items from the endpoint with the ID
   const fetchItems = async () => {
     try {
-      const response = await fetch('http://localhost:5000/revenueMate/v1/merchant/home', {
+      const response = await fetch('https://revenuemate-backend.onrender.com/revenueMate/v1/merchant/home', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -74,7 +74,7 @@ export default function RecordTransactions(props) {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:5000/revenueMate/v1/merchant/recordSale', {
+      const response = await fetch('https://revenuemate-backend.onrender.com/revenueMate/v1/merchant/recordSale', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

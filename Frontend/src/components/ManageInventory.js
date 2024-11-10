@@ -14,7 +14,7 @@ export default function ManageInventory(props) {
     e.preventDefault();
     
     try {
-      const response = await fetch('http://localhost:5000/revenueMate/v1/inventory/addInventory', {
+      const response = await fetch('https://revenuemate-backend.onrender.com/revenueMate/v1/inventory/addInventory', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

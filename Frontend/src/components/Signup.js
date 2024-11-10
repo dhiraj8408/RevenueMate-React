@@ -32,7 +32,7 @@ const Signup = (props) => {
   
     if (username && email && password) {
       try {
-        const response = await fetch('http://localhost:5000/revenueMate/v1/register', {
+        const response = await fetch('https://revenuemate-backend.onrender.com/revenueMate/v1/register', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

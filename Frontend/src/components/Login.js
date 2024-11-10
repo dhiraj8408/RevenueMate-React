@@ -34,7 +34,7 @@ const Login = (props) => {
 
     if (email && password) {
       try {
-        const response = await fetch('http://localhost:5000/revenueMate/v1/login', {
+        const response = await fetch('https://revenuemate-backend.onrender.com/revenueMate/v1/login', {
           method: 'POST',
           credentials: 'include',
           headers: {

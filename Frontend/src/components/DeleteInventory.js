@@ -13,7 +13,7 @@ const DeleteInventory = () => {
   useEffect(() => {
     const fetchItems = async () => {
       try {
-        const response = await fetch('http://localhost:5000/revenueMate/v1/merchant/home', {
+        const response = await fetch('https://revenuemate-backend.onrender.com/revenueMate/v1/merchant/home', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -64,7 +64,7 @@ const DeleteInventory = () => {
     console.log(selectedItems);
     
     try {
-      const response = await fetch('http://localhost:5000/revenueMate/v1/inventory/removeInventory', { // Updated URL
+      const response = await fetch('https://revenuemate-backend.onrender.com/revenueMate/v1/inventory/removeInventory', { // Updated URL
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

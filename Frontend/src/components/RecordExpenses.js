@@ -23,7 +23,7 @@ export default function RecordExpenses(props) {
     }
 
     try {
-      const response = await fetch('http://localhost:5000/revenueMate/v1/merchant/recordExpense', {
+      const response = await fetch('https://revenuemate-backend.onrender.com/revenueMate/v1/merchant/recordExpense', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
